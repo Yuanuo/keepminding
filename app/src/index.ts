@@ -9,7 +9,6 @@ import { monitorExitRequest } from "./lib/exit";
 import { naotuBase } from "./lib/base";
 import { onSelectedNodeItem, hasData } from "./lib/minder";
 import { remote } from "electron";
-import { shortcutDialog } from "./ui/shortcut";
 
 // 进入即记录日志
 logger.info("ipcRender init");
@@ -25,22 +24,22 @@ monitorExitRequest();
 
 angular
   .module("kityminderDemo", ["kityminderEditor"])
-  .config(function(configProvider: any) {
+  .config(function (configProvider: any) {
     configProvider.set("lang", I18n.getLang());
 
     // configProvider.set('imageUpload', '../server/imageUpload.php');
   })
-  .controller("MainController", function($scope: any, $modal: any) {
-    $scope.initEditor = function(editor: any, minder: any) {
+  .controller("MainController", function ($scope: any) {
+    $scope.initEditor = function (editor: any, minder: any) {
       editor = editor;
       minder = minder;
     };
   });
 
-$(function() {
+$(function () {
   if (minder != null) {
     // auto saving
-    minder.on("contentchange", function(argv: any) {
+    minder.on("contentchange", function (argv: any) {
       // 操作完成之后才触发事件
       if (naotuBase.getState() == "none") {
         logger.info(`invoked contentchange()`);
@@ -54,7 +53,7 @@ $(function() {
       }
     });
 
-    minder.on("selectionchange", function() {
+    minder.on("selectionchange", function () {
       let node = minder.getSelectedNode();
 
       // 修改菜单的状态

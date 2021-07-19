@@ -20,15 +20,12 @@
     "tests"
   ],
   "devDependencies": {
-    "seajs": "^3.0.0",
-    "bootbox.js": "bootbox#^4.4.0"
+    "seajs": "seajs#0ce0b19e16"
   },
   "dependencies": {
-    "kity": "^2.0.5",
-    "marked": "0.6.2",
-    "kityminder-editor": "git://github.com/NaoTu/kityminder-editor#master",
     "bootbox.js": "bootbox#^4.4.0",
-    "kityminder-core": "git://github.com/NaoTu/kityminder-core.git#dev"
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.6.0"
   },
   "overrides": {
     "jquery": {
@@ -68,10 +65,5 @@
     "seajs": {
       "main": []
     }
-  },
-  "resolutions": {
-    "angular": "~1.4.7",
-    "marked": "0.6.2",
-    "seajs": "^3.0.0"
   }
 }

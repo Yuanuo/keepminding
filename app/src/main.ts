@@ -50,7 +50,9 @@ import { sIndexUrl } from "./define";
       show: false,
       backgroundColor: "#fbfbfb",
       webPreferences: {
+        defaultEncoding: 'UTF-8',
         nodeIntegration: true,
+        enableRemoteModule: true,
         contextIsolation: false
       },
     });
@@ -84,7 +86,7 @@ import { sIndexUrl } from "./define";
     mainWindow.on("close", e => {
       if (!safeExit) {
         if (mainWindow) {
-          
+
           // 保存窗口大小设置
           try {
             // 获取配置文件
@@ -154,6 +156,7 @@ import { sIndexUrl } from "./define";
 
         safeExit = true;
         app.quit(); //退出程序
+        app.exit();
         break;
     }
   });

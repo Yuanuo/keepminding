@@ -24,7 +24,7 @@ export let sLogsDir = "/logs";
 /**
  * 配置文件名称
  */
-export let sConfigFile = "/naotu.config.json";
+export let sConfigFile = "/config.json";
 
 /**
  * 首页的路径
