@@ -32,7 +32,7 @@
   "sLoadedError": "Failed to load the file! Only support .km format file!",
   "sNoFileLocation": "file does not exist",
   "sNoUpdatesAvailable": "no updates available.",
-  "sAppName": "Desktop Naotu",
+  "sAppName": "KeepMinding",
   "sUpdateMessage": "A new version has been detected, please download the new version.",
   "sExportKm": "Export .Km",
   "sSaveKm": "Save .Km",

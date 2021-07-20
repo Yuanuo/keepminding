@@ -32,7 +32,7 @@
   "sLoadedError": "加載文件失敗！只允許打開.km格式的文件！",
   "sNoFileLocation": "文件路徑不存在",
   "sNoUpdatesAvailable": "當前沒有可用的更新。",
-  "sAppName": "桌面版腦圖",
+  "sAppName": "KeepMinding",
   "sUpdateMessage": "檢測到新版本，請下載新版本。",
   "sExportKm": "導出 KityMinder 文件",
   "sSaveKm": "保存 KityMinder 文件",

@@ -19,7 +19,7 @@ declare interface INaotuLogger {
 }
 
 /**
- * 桌面版脑图的日志类
+ * 日志类
  */
 class NaotuLogger implements INaotuLogger {
   //#region 日志的方法

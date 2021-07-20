@@ -2,7 +2,7 @@
 <?php
 
 $config = [
-    'project_path' => '/work/DesktopNaotu',
+    'project_path' => '/work/KeepMinding',
     'build_path' => '/work/OutApp',
     'release_path' => '/home/www/downloads/releases'
 ];
@@ -81,45 +81,45 @@ function package($ver, $version) {
     }
     switch ($ver) {
         case "win32":
-            RunCommand("rm -rf " . config('build_path') . "/DesktopNaotu-win32-ia32");
+            RunCommand("rm -rf " . config('build_path') . "/KeepMinding-win32-ia32");
             RunCommand('npm run packwin32');
-            $dir = config('build_path') . '/DesktopNaotu-win32-ia32';
+            $dir = config('build_path') . '/KeepMinding-win32-ia32';
             chdir($dir);
             $archiveName = config('build_path') . "/iNaotu-{$version}-win32.7z";
             RunCommand("7za a {$archiveName} $dir/*");
             RunCommand("cp {$archiveName} {$versionReleaseDir}");
             break;
         case "win32dev":
-            RunCommand("rm -rf " . config('build_path') . "/DesktopNaotu-win32-ia32");
+            RunCommand("rm -rf " . config('build_path') . "/KeepMinding-win32-ia32");
             RunCommand('npm run packwin32dev');
-            $dir = config('build_path') . '/DesktopNaotu-win32-ia32';
+            $dir = config('build_path') . '/KeepMinding-win32-ia32';
             chdir($dir);
             $archiveName = config('build_path') . "/iNaotu-{$version}-win32-dev.7z";
             RunCommand("7za a {$archiveName} $dir/*");
             RunCommand("cp {$archiveName} {$versionReleaseDir}");
             break;
         case "win64":
-            RunCommand("rm -rf " . config('build_path') . "/DesktopNaotu-win32-x64");
+            RunCommand("rm -rf " . config('build_path') . "/KeepMinding-win32-x64");
             RunCommand('npm run packwin64');
-            $dir = config('build_path') . '/DesktopNaotu-win32-x64';
+            $dir = config('build_path') . '/KeepMinding-win32-x64';
             chdir($dir);
             $archiveName = config('build_path') . "/iNaotu-{$version}-win64.7z";
             RunCommand("7za a {$archiveName} $dir/*");
             RunCommand("cp {$archiveName} {$versionReleaseDir}");
             break;
         case "linux":
-            RunCommand("rm -rf " . config('build_path') . "/DesktopNaotu-linux-x64");
+            RunCommand("rm -rf " . config('build_path') . "/KeepMinding-linux-x64");
             RunCommand('npm run packlinux');
-            $dir = config('build_path') . '/DesktopNaotu-linux-x64';
+            $dir = config('build_path') . '/KeepMinding-linux-x64';
             chdir($dir);
             $archiveName = config('build_path') . "/iNaotu-{$version}-linux-x64.7z";
             RunCommand("7za a {$archiveName} $dir/*");
             RunCommand("cp {$archiveName} {$versionReleaseDir}");
             break;
         case "macos":
-            RunCommand("rm -rf " . config('build_path') . "/DesktopNaotu-darwin-x64");
+            RunCommand("rm -rf " . config('build_path') . "/KeepMinding-darwin-x64");
             RunCommand('npm run packmacos');
-            $dir = config('build_path') . '/DesktopNaotu-darwin-x64';
+            $dir = config('build_path') . '/KeepMinding-darwin-x64';
             chdir($dir);
             $archiveName = config('build_path') . "/iNaotu-{$version}-macos-x64.7z";
             RunCommand("7za a {$archiveName} $dir/*");

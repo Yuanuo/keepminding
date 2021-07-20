@@ -35,18 +35,18 @@ export let sIndexUrl = join(`file://${__dirname}`, "/index.html");
  * 许可证的地址
  */
 export let sLicenseUrl =
-  "https://github.com/NaoTu/DesktopNaotu/blob/master/doc/Help.md";
+  "https://github.com/Yuanuo/keepminding/blob/master/doc/Help.md";
 
 /**
  * 检查更新的地址
  */
 export let sVersionUrl =
-  "https://raw.githubusercontent.com/NaoTu/DesktopNaotu/master/app/src/version.ts";
+  "https://raw.githubusercontent.com/Yuanuo/keepminding/master/app/src/version.ts";
 
 /**
  * 项目 release 地址
  */
-export let sReleasesUrl = "https://github.com/NaoTu/DesktopNaotu/releases";
+export let sReleasesUrl = "https://github.com/Yuanuo/keepminding/releases";
 
 /**
  * 导出窗口的标题
@@ -65,11 +65,11 @@ export type StatusList = "none" | "opening" | "closing" | "saving";
  * 关于的内容
  */
 export let sAboutText = `
-Copyright (c) 2019 Jack <br><br>
+Copyright (c) 2021-2099 Yuanuo <br><br>
 Version: v${version.join(".")}<br><br>
 Thanks: 
 <a href='javascript:void(0);' onclick='openUrl("https://inaotu.org/");'>爱脑图(iNaotu)</a> |
-<a href='javascript:void(0);' onclick='openUrl("https://github.com/NaoTu/DesktopNaotu");'>iNaotu Team.</a>`;
+<a href='javascript:void(0);' onclick='openUrl("https://github.com/Yuanuo/keepminding");'>Project Home.</a>`;
 
 /**
  * 当前配置文件的版本

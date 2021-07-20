@@ -1,6 +1,6 @@
 {
-  "name": "desktopnaotu",
-  "description": "桌面版脑图",
+  "name": "keepminding",
+  "description": "KeepMinding",
   "main": "main.js",
   "authors": [
     "'Jack' <'topcss@gmail.com'>"
@@ -8,9 +8,11 @@
   "license": "MIT",
   "keywords": [
     "mind",
-    "naotu"
+    "naotu",
+    "minding",
+    "mindmap"
   ],
-  "homepage": "https://github.com/NaoTu/DesktopNaotu",
+  "homepage": "https://github.com/Yuanuo/keepminding",
   "private": true,
   "ignore": [
     "**/.*",

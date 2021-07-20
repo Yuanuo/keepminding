@@ -1,6 +1,6 @@
 
 {
-    "executableName": "桌面版脑图",
+    "executableName": "KeepMinding",
     "dest": "../installers/",
     "icon": "./app/static/favicon.png",
     "categories": [
