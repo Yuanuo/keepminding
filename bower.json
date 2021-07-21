@@ -25,7 +25,7 @@
     "seajs": "seajs#0ce0b19e16"
   },
   "dependencies": {
-    "bootbox.js": "bootbox#^4.4.0",
+    "bootbox": "^5.5.2",
     "bootstrap": "^4.6.0",
     "jquery": "^3.6.0"
   },

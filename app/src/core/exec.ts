@@ -7,28 +7,28 @@ import { logger } from "./logger";
  * @param args 参数
  */
 export default async function execAsync(
-  command: string,
-  ...args: string[]
+    command: string,
+    ...args: string[]
 ): Promise<string> {
-  return new Promise<string>((resolve, reject) => {
-    logger.info(`${command} ${args}`);
+    return new Promise<string>((resolve, reject) => {
+        logger.info(`${command} ${args}`);
 
-    exec(`${command} ${args}`, { encoding: "utf8" }, (error, stdout, stderr) => {
-      /* istanbul ignore if */
-      if (error) {
-        reject(error);
-        return;
-      }
+        exec(`${command} ${args}`, { encoding: "utf8" }, (error, stdout, stderr) => {
+            /* istanbul ignore if */
+            if (error) {
+                reject(error);
+                return;
+            }
 
-      if (stderr !== "") {
-        reject(new Error(stderr as string));
-        return;
-      }
+            if (stderr !== "") {
+                reject(new Error(stderr as string));
+                return;
+            }
 
-      // Remove new line etc.
-      const normalisedResult = stdout.toString().trim();
+            // Remove new line etc.
+            const normalisedResult = stdout.toString().trim();
 
-      resolve(normalisedResult);
+            resolve(normalisedResult);
+        });
     });
-  });
 }

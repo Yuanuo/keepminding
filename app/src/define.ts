@@ -69,7 +69,7 @@ Copyright (c) 2021-2099 Yuanuo <br><br>
 Version: v${version.join(".")}<br><br>
 Thanks: 
 <a href='javascript:void(0);' onclick='openUrl("https://inaotu.org/");'>爱脑图(iNaotu)</a> |
-<a href='javascript:void(0);' onclick='openUrl("https://github.com/Yuanuo/keepminding");'>Project Home.</a>`;
+<a href='javascript:void(0);' onclick='openUrl("https://github.com/Yuanuo/keepminding");'>Yuanuo/keepminding</a>`;
 
 /**
  * 当前配置文件的版本

@@ -5,7 +5,7 @@
  * 行为：恢复上一次撤销
  */
 export function redo() {
-  editor.history.redo();
+    editor.history.redo();
 }
 
 /**
@@ -15,5 +15,5 @@ export function redo() {
  * 行为：撤销上一步操作
  */
 export function undo() {
-  editor.history.undo();
+    editor.history.undo();
 }
