@@ -56,7 +56,7 @@ gulp.task("copy-js-vendor", function () {
     return gulp
         .src([
             "bower_components/jquery/dist/jquery.min.js",
-            "bower_components/bootstrap/dist/js/bootstrap.bundle.min.js",
+            "bower_components/bootstrap/dist/js/bootstrap.min.js",
             "bower_components/bootbox/dist/bootbox.all.min.js",
             "node_modules/kityminder-editor/bower_components/angular/angular.min.js",
             "node_modules/kityminder-editor/bower_components/angular-bootstrap/ui-bootstrap-tpls.js",

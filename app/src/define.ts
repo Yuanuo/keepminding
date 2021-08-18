@@ -65,11 +65,9 @@ export type StatusList = "none" | "opening" | "closing" | "saving";
  * 关于的内容
  */
 export let sAboutText = `
-Copyright (c) 2021-2099 Yuanuo <br><br>
-Version: v${version.join(".")}<br><br>
-Thanks: 
-<a href='javascript:void(0);' onclick='openUrl("https://inaotu.org/");'>爱脑图(iNaotu)</a> |
-<a href='javascript:void(0);' onclick='openUrl("https://github.com/Yuanuo/keepminding");'>Yuanuo/keepminding</a>`;
+Copyright (c) 2021-2099 <br><br>
+Version: v${version.join(".")}<br>
+<h3>不忘初心，善住当下！</h3>`;
 
 /**
  * 当前配置文件的版本

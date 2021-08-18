@@ -49,7 +49,7 @@ export function initializationMainServices() {
 
     ipcMain.on('saveDialog', (event, argvString) => {
         let argv = JSON.parse(argvString);
-        dialog.showOpenDialog(argv)
+        dialog.showSaveDialog(argv)
             .then(result => {
                 event.sender.send('saveDialog-reply', JSON.stringify(result));
             })

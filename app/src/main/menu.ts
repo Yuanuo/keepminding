@@ -9,7 +9,7 @@ export const enum RecentsMode {
 }
 
 function _render(channel: string, ...args: any[]): void {
-    BrowserWindow.getFocusedWindow()?.webContents.send(channel, args);
+    BrowserWindow.getFocusedWindow()?.webContents.send(channel, args.length==1 ? args[0] : args);
 }
 
 class AppMenu {

@@ -59,7 +59,7 @@ import { initializationMainServices } from "./main/mainServices";
         logger.info(`open url ${sIndexUrl} `);
         mainWindow.loadURL(sIndexUrl);
 
-        Menu.setApplicationMenu(appMenu.buildMenuWithRenderRecents());
+        Menu.setApplicationMenu(appMenu.buildMenuWithManagedRecents());
 
         // Emitted when the window is closed.
         mainWindow.on("closed", () => {

@@ -37,7 +37,7 @@ export function openRecentDocuments() {
         title: 'Recent Documents',
         size: 'extra-large',
         message: `
-    <div class="list-group">
+    <div class="list-group modal-dialog modal-dialog-scrollable">
       ${listGroup.join('')}
     </div>
     ` });
