@@ -56,10 +56,10 @@ export function getDefaultPath(path?: string | undefined): string {
     if (path) dir = path;
 
     let counter = 0;
-    let filePath = join(dir, `${rootText}.km`);
+    let filePath = join(dir, `${rootText}.kmind`);
 
     do {
-        filePath = join(dir, `${rootText}${counter++ || ""}.km`);
+        filePath = join(dir, `${rootText}${counter++ || ""}.kmind`);
     } while (existsSync(filePath));
 
     return filePath;
@@ -72,7 +72,7 @@ export function getDefaultPath(path?: string | undefined): string {
 export function onSelectedNodeItem(isSelected: boolean) {
     try {
         ipcRenderer.send('setEditMemuEnable', isSelected);
-    } catch (ex) {
+    } catch (ex: any) {
         logger.error(ex);
     }
 }

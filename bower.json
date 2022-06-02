@@ -12,7 +12,7 @@
     "minding",
     "mindmap"
   ],
-  "homepage": "https://github.com/Yuanuo/keepminding",
+  "homepage": "https://github.com/Yuanuo/kityminder-app",
   "private": true,
   "ignore": [
     "**/.*",
@@ -22,7 +22,7 @@
     "tests"
   ],
   "devDependencies": {
-    "seajs": "seajs#0ce0b19e16"
+    "seajs": "seajs#master"
   },
   "dependencies": {
     "bootbox": "^5.5.2",

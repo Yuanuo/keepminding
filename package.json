@@ -1,43 +1,45 @@
 {
   "name": "keepminding",
-  "version": "21.8.18",
+  "version": "22.6.2",
   "description": "KeepMinding",
+  "productName": "KeepMinding",
   "main": "dist/main.js",
   "scripts": {
     "start": "gulp default",
     "demo": "electron .",
-    "packwin32": "cross-var electron-packager ./ KeepMinding --asar --platform=win32 --arch=ia32 --out=../$npm_package_name-dist --icon=app/static/favicon.ico --app-version=$npm_package_version --ignore=\"(.git|screenshot|doc|src|app|bower_components|electron-packager)\" --overwrite --prune",
-    "packwin32dev": "cross-var electron-packager ./ KeepMinding --platform=win32 --arch=ia32 --out=../$npm_package_name-dist --icon=app/static/favicon.ico --app-version=$npm_package_version --ignore=\"(.git|screenshot|doc|bower_components|electron-packager)\" --overwrite --prune",
-    "packwin64": "cross-var electron-packager ./ KeepMinding --asar --platform=win32 --arch=x64 --out=../$npm_package_name-dist --icon=app/static/favicon.ico --app-version=$npm_package_version --ignore=\"(.git|screenshot|doc|src|app|bower_components|electron-packager)\" --overwrite --prune",
-    "packwin64dev": "cross-var electron-packager ./ KeepMinding --platform=win32 --arch=x64 --out=../$npm_package_name-dist --icon=app/static/favicon.ico --app-version=$npm_package_version --ignore=\"(.git|screenshot|doc|bower_components|electron-packager)\" --overwrite --prune",
-    "packmacos": "cross-var electron-packager ./ KeepMinding --asar --platform=darwin --arch=x64 --out=../$npm_package_name-dist --icon=app/static/favicon.icns --app-version=$npm_package_version --ignore=\"(.git|screenshot|doc|src|app|bower_components|electron-packager)\" --overwrite --prune",
-    "packlinux": "cross-var electron-packager ./ KeepMinding --asar --platform=linux --arch=x64 --out=../$npm_package_name-dist --icon=app/static/favicon.png --app-version=$npm_package_version --ignore=\"(.git|screenshot|doc|src|app|bower_components|electron-packager)\" --overwrite --prune",
-    "packlinuxarm": "cross-var electron-packager ./ keepminding --asar --platform=linux --arch=arm64 --out=../$npm_package_name-dist --icon=app/static/favicon.png --app-version=$npm_package_version --ignore=\"(.git|screenshot|doc|src|app|bower_components|electron-packager|.electron)\" --overwrite --prune",
-    "deb64": "cross-var electron-installer-debian --src ../$npm_package_name-dist/keepminding-linux-arm64 --dest ../installers/ --arch arm64 --config config.json"
+    "packWin32": "cross-var electron-packager ./ KeepMinding --asar --platform=win32  --arch=ia32  --out=../kityminder-app-dist --icon=app/static/favicon.ico  --app-version=$npm_package_version --ignore=\"(.git|screenshot|doc|src|app|bower_components|electron-packager)\" --overwrite --prune",
+    "packWin32dev": "cross-var electron-packager ./ KeepMinding        --platform=win32  --arch=ia32  --out=../kityminder-app-dist --icon=app/static/favicon.ico  --app-version=$npm_package_version --ignore=\"(.git|screenshot|doc|bower_components|electron-packager)\"         --overwrite --prune",
+    "packWin64": "cross-var electron-packager ./ KeepMinding --asar --platform=win32  --arch=x64   --out=../kityminder-app-dist --icon=app/static/favicon.ico  --app-version=$npm_package_version --ignore=\"(.git|screenshot|doc|src|app|bower_components|electron-packager)\" --overwrite --prune",
+    "packWin64dev": "cross-var electron-packager ./ KeepMinding        --platform=win32  --arch=x64   --out=../kityminder-app-dist --icon=app/static/favicon.ico  --app-version=$npm_package_version --ignore=\"(.git|screenshot|doc|bower_components|electron-packager)\"         --overwrite --prune",
+    "packMacos": "cross-var electron-packager ./ KeepMinding --asar --platform=darwin --arch=x64   --out=../kityminder-app-dist --icon=app/static/favicon.icns --app-version=$npm_package_version --ignore=\"(.git|screenshot|doc|src|app|bower_components|electron-packager)\" --overwrite --prune",
+    "packLinux": "cross-var electron-packager ./ KeepMinding --asar --platform=linux  --arch=x64   --out=../kityminder-app-dist --icon=app/static/favicon.png  --app-version=$npm_package_version --ignore=\"(.git|screenshot|doc|src|app|bower_components|electron-packager)\" --overwrite --prune",
+    "packLinuxarm": "cross-var electron-packager ./ keepminding --asar --platform=linux  --arch=arm64 --out=../kityminder-app-dist --icon=app/static/favicon.png  --app-version=$npm_package_version --ignore=\"(.git|screenshot|doc|src|app|bower_components|electron-packager|.electron)\" --overwrite --prune",
+    "deb64": "cross-var electron-installer-debian --src ../kityminder-app-dist/keepminding-linux-arm64 --dest ../installers/ --arch arm64 --config config.json",
+    "setupWin64": "electron-installer-windows --src ../kityminder-app-dist/KeepMinding-win32-x64/ --dest ../kityminder-app-dist/ --icon ./app/static/favicon.ico"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Yuanuo/keepminding.git"
+    "url": "git+https://github.com/Yuanuo/kityminder-app.git"
   },
   "keywords": ["mind", "naotu", "minding", "mindmap"],
-  "author": "'Jack' <'topcss@gmail.com'>",
+  "author": "AppXI",
+  "author0": "'Jack' <'topcss@gmail.com'>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Yuanuo/keepminding/issues"
+    "url": "https://github.com/Yuanuo/kityminder-app/issues"
   },
-  "homepage": "https://github.com/Yuanuo/keepminding#readme",
+  "homepage": "https://github.com/Yuanuo/kityminder-app#readme",
   "devDependencies": {
-    "@babel/core": "^7.15.0",
+    "@babel/core": "^7.18.2",
     "@types/byline": "^4.2.33",
-    "@types/ejs": "^3.1.0",
-    "@types/node": "^16.6.1",
+    "@types/ejs": "^3.1.1",
+    "@types/node": "^17.0.38",
     "browserify": "^17.0.0",
     "cross-var": "^1.1.0",
-    "del": "^6.0.0",
-    "electron": "^13.2.1",
-    "electron-packager": "^15.3.0",
-    "grunt": "^1.4.1",
-    "grunt-electron-installer": "^2.1.0",
+    "del": "^6.1.1",
+    "electron": "^19.0.2",
+    "electron-packager": "^15.5.1",
+    "electron-wix-msi": "^4.0.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
@@ -47,21 +49,21 @@
     "gulp-notify": "^4.0.0",
     "gulp-typescript": "^6.0.0-alpha.1",
     "gulp-uglify": "^3.0.2",
-    "js-beautify": "^1.14.0",
-    "jshint": "^2.13.1",
+    "js-beautify": "^1.14.3",
+    "jshint": "^2.13.4",
     "tsify": "^5.0.4",
-    "typescript": "^4.3.5",
+    "typescript": "^4.7.2",
     "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
     "child_process": "^1.0.2",
-    "ejs": "^3.1.6",
-    "hotkeys-js": "^3.8.7",
+    "ejs": "^3.1.8",
+    "hotkeys-js": "^3.9.4",
     "kity": "file:../kity",
     "kityminder-core": "file:../kityminder-core",
     "kityminder-editor": "file:../kityminder-editor",
-    "moment": "^2.29.1",
-    "winston": "^3.3.3"
+    "moment": "^2.29.3",
+    "winston": "^3.7.2"
   },
   "resolutions": {
     "graceful-fs": "^4.2.6"

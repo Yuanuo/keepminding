@@ -26,7 +26,7 @@ export function openDocument(filePath: string) {
         ipcRenderer.send('setFileNameToTitle', filePath);
 
         appBase.setState("none");
-    } catch (error) {
+    } catch (error: any) {
         logger.error("openKm error, ", error);
     }
 }
@@ -53,7 +53,7 @@ export function saveDocument(filePath: string) {
         appBase.onSaved();
 
         appBase.setState("none");
-    } catch (error) {
+    } catch (error: any) {
         logger.error("saveKm error, ", error);
     }
 }
@@ -70,7 +70,8 @@ export function openFileByDrop() {
         e.preventDefault();
         if (e.dataTransfer) {
             let file = e.dataTransfer.files[0];
-            if (!file.name.toLowerCase().endsWith(".km")) {
+            let fileName = file.name.toLowerCase();
+            if (!fileName.endsWith(".km") && !fileName.endsWith(".kmind")) {
                 bootbox.alert(I18n.V("sLoadedError"));
                 return false;
             }
@@ -100,7 +101,7 @@ export function autoSave(checked: boolean) {
 
         // 保存配置文件
         appConfig.save(confObj);
-    } catch (ex) {
+    } catch (ex: any) {
         logger.error(ex);
     }
 }

@@ -1,5 +1,5 @@
 import { ipcRenderer } from "electron";
-import { sExportTitle, arrExtensions } from "../define";
+import { sExportTitle, openFileTypes, saveFileTypes } from "../define";
 import { appBase } from "./base";
 import { saveDocument, openDocument } from "./file";
 import { appConfig } from "../core/conf";
@@ -29,7 +29,7 @@ export function openDialog() {
             openDocument(fileNames[0]);
         });
 
-        ipcRenderer.send('openDialog', JSON.stringify({ filters: [{ name: sExportTitle, extensions: arrExtensions }] }));
+        ipcRenderer.send('openDialog', JSON.stringify({ filters: [{ name: sExportTitle, extensions: openFileTypes }] }));
 
     } else {
         bootbox.alert(I18n.V("sSaveTip"));
@@ -65,7 +65,7 @@ export function saveDialog() {
  * 行为：弹出保存对话框，选择保存路径及文件名后，保存当前文件
  */
 export function saveAsDialog() {
-    let newPath = join(getUserDataDir(), `${minder.getRoot().data.text}.km`);
+    let newPath = join(getUserDataDir(), `${minder.getRoot().data.text}.kmind`);
 
     // 如果有，通过当前文件路径，生成一个新的文件路径
     let srcPath = appBase.getCurrentDocument();
@@ -85,7 +85,7 @@ export function saveAsDialog() {
         appBase.setCurrentDocument(fileName);
     });
 
-    ipcRenderer.send('saveDialog', JSON.stringify({ title: I18n.V("sSaveKm"), defaultPath: newPath, filters: [{ name: sExportTitle, extensions: arrExtensions }] }));
+    ipcRenderer.send('saveDialog', JSON.stringify({ title: I18n.V("sSaveKm"), defaultPath: newPath, filters: [{ name: sExportTitle, extensions: saveFileTypes }] }));
 }
 
 /**
@@ -106,7 +106,7 @@ export function setSavePath() {
         });
 
         ipcRenderer.send('openDialog', JSON.stringify({ properties: ["openDirectory"], defaultPath: conf.defSavePath }));
-    } catch (ex) {
+    } catch (ex: any) {
         logger.error(ex);
     }
 }
@@ -130,6 +130,13 @@ export function exportDialog() {
     for (let name in pool) {
         // 目前导出 md 文件有问题，暂时跳过
         if (name === "markdown") continue;
+        if (name === "json") {
+            filters.push({
+                name: sExportTitle,
+                extensions: saveFileTypes
+            });
+            continue;
+        }
 
         if (pool.hasOwnProperty(name) && pool[name].encode) {
             filters.push({

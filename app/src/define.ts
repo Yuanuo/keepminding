@@ -35,23 +35,23 @@ export let sIndexUrl = join(`file://${__dirname}`, "/index.html");
  * 许可证的地址
  */
 export let sLicenseUrl =
-  "https://github.com/Yuanuo/keepminding/blob/master/doc/Help.md";
+  "https://github.com/Yuanuo/kityminder-app/blob/master/doc/Help.md";
 
 /**
  * 检查更新的地址
  */
 export let sVersionUrl =
-  "https://raw.githubusercontent.com/Yuanuo/keepminding/master/app/src/version.ts";
+  "https://raw.githubusercontent.com/Yuanuo/kityminder-app/master/app/src/version.ts";
 
 /**
  * 项目 release 地址
  */
-export let sReleasesUrl = "https://github.com/Yuanuo/keepminding/releases";
+export let sReleasesUrl = "https://github.com/Yuanuo/kityminder-app/releases";
 
 /**
  * 导出窗口的标题
  */
-export let sExportTitle = "KityMinder";
+export let sExportTitle = "Kity Mindmap";
 
 /**
  * 操作状态
@@ -80,8 +80,13 @@ export let sConfigVersion = "v0.1.2";
 export type Languages = "en" | "zh-CN" | "zh-TW" | "de";
 
 /**
- * 支持的扩展名
+ * 支持打开的扩展名
  */
-export let arrExtensions: string[] = ["km"];
+export let openFileTypes: string[] = ["kmind", "km"];
+
+/**
+ * 支持保存的扩展名
+ */
+export let saveFileTypes: string[] = ["kmind"];
 
 //#endregion
