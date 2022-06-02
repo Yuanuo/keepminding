@@ -74,7 +74,7 @@ function savePreferences() {
 
         // 保存配置文件
         appConfig.save(confObj);
-    } catch (ex) {
+    } catch (ex: any) {
         logger.error(ex);
     }
 }

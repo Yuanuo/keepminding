@@ -37,7 +37,7 @@ export function checkVersion() {
                 bootbox.alert(I18n.V("sNoUpdatesAvailable"));
             }
         });
-    } catch (ex) {
+    } catch (ex: any) {
         logger.error(ex);
     }
 }

@@ -28,7 +28,7 @@ export function addRecentDocument(filePath: string) {
         if (appMenu.getRecentsMode() === RecentsMode.managed) {
             Menu.setApplicationMenu(appMenu.buildMenuWithManagedRecents());
         }
-    } catch (ex) {
+    } catch (ex: any) {
         logger.error(ex);
     }
 }
@@ -48,7 +48,7 @@ export function clearRecentDocuments() {
         if (appMenu.getRecentsMode() === RecentsMode.managed) {
             Menu.setApplicationMenu(appMenu.buildMenuWithManagedRecents());
         }
-    } catch (ex) {
+    } catch (ex: any) {
         logger.error(ex);
     }
 }

@@ -93,7 +93,7 @@ import { initializationMainServices } from "./main/mainServices";
                         appConfig.save(confObj);
 
                         logger.info(`Saved current window size: [${confObj.editorWindowWidth}, ${confObj.editorWindowHeight}]`);
-                    } catch (ex) {
+                    } catch (ex: any) {
                         logger.error(ex);
                     }
 
